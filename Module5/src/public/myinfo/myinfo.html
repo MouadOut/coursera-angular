@@ -1,0 +1,63 @@
+<div class="container">
+  <div ng-if="!myInfoCtrl.info">
+    <i class="bi bi-emoji-frown"></i> Not Signed Up Yet.
+    <a ui-sref="public.signup" class="btn btn-warning"
+      ><b class="text-primary"
+        >Sign up Now! <i class="bi bi-box-arrow-in-right"></i></b
+    ></a>
+  </div>
+
+  <div ng-if="myInfoCtrl.info">
+    <div>
+      <h2 class="text-center">My Info <i class="bi bi-person-badge"></i></h2>
+      <div>
+        <b><i class="bi bi-emoji-smile"></i> First name:</b>
+        {{myInfoCtrl.info.firstName}} <br />
+        <b><i class="bi bi-emoji-smile"></i> Last name:</b>
+        {{myInfoCtrl.info.lastName}} <br />
+        <b><i class="bi bi-envelope-heart"></i> Email address:</b>
+        {{myInfoCtrl.info.email}} <br />
+        <b><i class="bi bi-telephone"></i> Phone number:</b>
+        {{myInfoCtrl.info.phone}} <br />
+        <b><i class="bi bi-heart-fill"></i> My favorite dish:</b>
+        {{myInfoCtrl.info.menuFav.name}} <br />
+        <b><i class="bi bi-suit-heart"></i> My favorite dish short name:</b>
+        {{myInfoCtrl.info.menuFav.short_name}}
+        <br />
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-center">
+        My Favorite <i class="bi bi-postcard-heart"></i>
+      </h2>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="menu-item-photo-info">
+            <div>{{myInfoCtrl.info.menuFav.short_name}}</div>
+            <img
+              class="img-responsive"
+              width="250"
+              height="150"
+              ng-src="images/menu/{{myInfoCtrl.menuItem.category_short_name}}/{{myInfoCtrl.menuItem.short_name}}.jpg"
+              alt="{{myInfoCtrl.menuItem.name}}"
+            />
+          </div>
+          <div class="text-right">
+            {{myInfoCtrl.info.menuFav.price_small | currency}}<span>
+              {{myInfoCtrl.info.menuFav.small_portion_name}}</span
+            >
+            {{myInfoCtrl.info.menuFav.price_large | currency}}
+            <span>{{myInfoCtrl.info.menuFav.large_portion_name}}</span>
+          </div>
+        </div>
+        <div class="menu-item-description col-sm-9">
+          <h3 class="menu-item-title">{{myInfoCtrl.info.menuFav.name}}</h3>
+          <p class="menu-item-details">
+            {{myInfoCtrl.info.menuFav.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
