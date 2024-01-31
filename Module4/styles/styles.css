@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Arial, Times;
+}
+
+h1 {
+  background-color: rgba(194, 177, 162, 0.7);
+  text-align: center;
+  padding: 10px 0 3px;
+  color: rgb(11, 2, 22);
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-bottom: 0px;
+  text-shadow: 3px 3px #e2ced0;
+}
+
+.categories .menu {
+  min-height: 400px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  background-color: rgba(194, 177, 162, 0.7);
+}
+.breadcrumb a {
+  color: rgb(156, 23, 23);
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+  color: rgb(19, 41, 243);
+  font-weight: bold;
+}
+.breadcrumb .actual {
+  font-weight: bold;
+}
+.home {
+  text-align: center;
+  width: 100%;
+}
+
+.welcome-text {
+  font-size: 2.5em;
+  /* position: absolute;
+  top: 10%; 
+  left: 10%; */
+}
+
+.home-link:hover {
+  font-weight: bold;
+}
+
+.cat {
+  /* background-image: url("https://thumbs.dreamstime.com/b/design-menu-background-27832409.jpg"); */
+  background-image: url("https://wallpapercave.com/wp/wp1961687.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: #ffffff;
+}
+.categories {
+  display: table;
+  width: 100%;
+}
+.categories .menu {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 220px;
+  width: 1px;
+  background-color: rgba(194, 177, 162, 0.8);
+  /* border: 1px solid#7F5025; */
+  border-top: none;
+  border-bottom: none;
+}
+.categories .menu ul {
+  padding-left: 0;
+}
+.categories .menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(252, 252, 252);
+  font-size: 14px;
+  font-weight: 550;
+}
+.categories .menu ul li:hover {
+  background-color: rgb(166, 231, 146);
+  color: #6079ff;
+  font-weight: bolder;
+}
+.categories .detail {
+  display: table-cell;
+  padding: 0 20px 20px 20px;
+}
+.categories .detail h2 {
+  border-bottom: 1px solid #555;
+}
+.categories .detail table {
+  border: none;
+  /* width: 100%; */
+}
+.categories .detail table thead {
+  background-color: #555;
+  color: white;
+}
+.categories .detail table thead th {
+  text-align: left;
+  font-size: 14px;
+  padding: 7px;
+}
+.categories .detail table td {
+  font-size: 14px;
+  padding: 5px 7px;
+}
+#tableItems.table-striped > tbody > tr:nth-child(2n + 1) > td,
+#tableItems.table-striped > tbody > tr:nth-child(2n + 1) > th {
+  background-color: rgb(165, 196, 231);
+}
+
+#tableItems.table-striped > tbody > tr:nth-child(2n) > td,
+#tableItems.table-striped > tbody > tr:nth-child(2n) > th {
+  background-color: rgb(166, 233, 218);
+}
+
+#nav_bar ul li a.active-page {
+  background-color: rgba(194, 177, 162, 0.7);
+}
+
+#nav_bar ul li a:hover {
+  background-color: rgb(166, 231, 146);
+  color: #6079ff;
+  font-weight: bold;
+}

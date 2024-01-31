@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Lou's Restaurant</a>
+    <div
+      id="nav_bar"
+      class="collapse navbar-collapse d-flex"
+      id="navbarTogglerDemo03"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" ui-sref="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active active-page"
+            aria-current="page"
+            ui-sref="categories"
+            >Categories</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h1 class="text-center pb-1">{{ itm.category.name }}</h1>
+  <div class="breadcrumb justify-content-center">
+    <a ui-sref="home">Home</a>
+    <span class="separator">&gt;</span>
+    <a ui-sref="categories">Categories</a>
+    <span class="separator">&gt;</span>
+    <span class="actual"
+      >Item: {{ itm.category.name }} ({{ itm.category.short_name }})</span
+    >
+  </div>
+  <small ng-show="itm.category.special_instructions.length"
+    >**<i>{{itm.category.special_instructions}}</i></small
+  >
+  <table id="tableItems" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Short Name</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in itm.menu_items">
+        <td>{{item.short_name}}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>${{ item.price_large }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
